@@ -4,12 +4,8 @@ using OpenQA.Selenium.Chrome;
 
 namespace Vgtu.Test.Chrome
 {
-    public class OldLinkRedirectTest
+    public class OldLinkRedirectTest : BaseArrangement
     {
-        private readonly string _oldUrl = "https://vgtu.lt";
-        private readonly string _url = "https://vilniustech.lt/";
-        private readonly IWebDriver _driver = new ChromeDriver();
-
         [Fact]
         public void RedirectOnOldLink()
         {
@@ -17,7 +13,7 @@ namespace Vgtu.Test.Chrome
             {
                 _driver.Navigate().GoToUrl(_oldUrl);
 
-                Assert.Equal(_url, _driver.Url);
+                Assert.Equal(Url, _driver.Url);
             }
         }
     }
