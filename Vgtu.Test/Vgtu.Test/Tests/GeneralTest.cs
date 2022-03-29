@@ -38,7 +38,7 @@ namespace Vgtu.Test.Chrome
             {
                 _driver.Navigate().GoToUrl(Url);
 
-                _driver.Navigate().GoToUrl(Url + _universityPageUri);
+                _driver.Navigate().GoToUrl(Url + PageUri.UniversityPageUri);
                 Thread.Sleep(3000);
                 _driver.Navigate().Back();
 
