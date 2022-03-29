@@ -4,7 +4,8 @@
     {
         public static string BuildUrl(string baseUrl, string uri)
         {
-            if (baseUrl[baseUrl.Length - 1] != '/')
+            int length = baseUrl.Length - 1;
+            if (baseUrl[length] != '/')
                 baseUrl += '/';
             return baseUrl + uri;
         }
@@ -20,8 +21,7 @@
         {
             if (!string.IsNullOrEmpty(str))
             {
-                str.Replace(' ', filler);
-                return str;
+                return str.Replace(' ', filler);
             }
             return "";
         }
