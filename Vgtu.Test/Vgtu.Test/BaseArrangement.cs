@@ -10,7 +10,5 @@ namespace Vgtu.Test
         protected readonly string _oldUrl = "https://vgtu.lt";
         protected readonly string _instagramUrl = "https://www.instagram.com/vilniustech/";
         protected readonly IWebDriver _driver = new ChromeDriver();
-        protected readonly string _universityPageUri = "universitetas/9";
-
     }
 }
