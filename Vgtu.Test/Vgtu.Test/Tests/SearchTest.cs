@@ -3,7 +3,7 @@ using OpenQA.Selenium;
 using Vgtu.Test.Helpers;
 using System.Collections.Generic;
 
-namespace Vgtu.Test.Chrome
+namespace Vgtu.Test.Tests
 {
     public class SearchTest : BaseArrangement
     {

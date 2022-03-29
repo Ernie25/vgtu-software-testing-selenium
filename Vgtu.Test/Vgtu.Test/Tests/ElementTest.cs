@@ -1,7 +1,7 @@
 ﻿using OpenQA.Selenium;
 using Xunit;
 
-namespace Vgtu.Test.Chrome
+namespace Vgtu.Test.Tests
 {
     public class ElementTest : BaseArrangement
     {

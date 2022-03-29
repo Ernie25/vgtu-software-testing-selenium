@@ -1,7 +1,7 @@
 using Xunit;
 using System.Threading;
 
-namespace Vgtu.Test.Chrome
+namespace Vgtu.Test.Tests
 {
     public class GeneralTest : BaseArrangement
     {

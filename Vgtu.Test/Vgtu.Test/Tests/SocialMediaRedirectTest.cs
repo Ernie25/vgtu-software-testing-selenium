@@ -4,7 +4,7 @@ using System.Threading;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Vgtu.Test.Chrome
+namespace Vgtu.Test.Tests
 {
     public class SocialMediaRedirectTest : BaseArrangement
     {

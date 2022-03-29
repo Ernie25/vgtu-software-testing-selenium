@@ -1,8 +1,6 @@
 ﻿using Xunit;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
 
-namespace Vgtu.Test.Chrome
+namespace Vgtu.Test.Tests
 {
     public class OldLinkRedirectTest : BaseArrangement
     {
