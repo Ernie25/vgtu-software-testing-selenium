@@ -16,3 +16,6 @@ This project is a solution for a given assignment of Software Testing subject fr
 
 ## Note
 The last test update was on 2022.03.31. On later viewing, they can become outdated.
+
+## Screenshots
+<img src="./Screenshots/Header.PNG" width="45%" />&emsp;<img src="./Screenshots/Footer.PNG" width="45%" />
