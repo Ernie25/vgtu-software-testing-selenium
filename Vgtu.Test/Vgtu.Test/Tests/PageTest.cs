@@ -11,47 +11,66 @@ namespace Vgtu.Test.Tests
     {
         [Theory]
         [MemberData(nameof(Pages))]
-        public void ReachPage(string linkText, string expectedUri)
+        public void ReachPage(string linkText, string expectedUri, string wrapper)
         {
             using (_driver)
             {                
                 _driver.Manage().Window.Maximize();
                 _driver.Navigate().GoToUrl(Url);
 
-
-                var navigationMenu = _driver.FindElement(By.ClassName("main_menu"));
+                var navigationMenu = _driver.FindElement(By.ClassName(wrapper));
                 var navigationButton = navigationMenu.FindElement(By.LinkText(linkText));
                 navigationButton?.Click();
-
+                
                 Assert.Equal(StringUrlBuilder.BuildUrl(Url, expectedUri), _driver.Url);
             }
         }
-
         private static IEnumerable<object[]> Pages()
         {
             yield return new object[] {
                 "Universitetas",
-                PageUri.UniversityPageUri
+                PageUri.UniversityPageUri,
+                "main_menu"
             };
             yield return new object[] {
                 "Stojantiesiems",
-                PageUri.ApplicantsPageUri
+                PageUri.ApplicantsPageUri,
+                "main_menu"
             };
             yield return new object[] {
                 "Mokslui",
-                PageUri.EducationPageUri
+                PageUri.EducationPageUri,
+                "main_menu"
             };
             yield return new object[] {
                 "Verslui",
-                PageUri.BusinessPageUri
+                PageUri.BusinessPageUri,
+                "main_menu"
             };
             yield return new object[] {
                 "Tarptautiškumas",
-                PageUri.InternationalStudentsPageUri
+                PageUri.InternationalStudentsPageUri,
+                "main_menu"
             };
             yield return new object[] {
                 "Fakultetai",
-                PageUri.FacultiesPageUri
+                PageUri.FacultiesPageUri,
+                "main_menu"
+            };
+            yield return new object[] {
+                "Kontaktai",
+                PageUri.MainContactsUri,
+                "footer-nav"
+            };
+            yield return new object[] {
+                "Duomenų saugumas",
+                PageUri.DataSecuriytUri,
+                "footer-nav"
+            };
+            yield return new object[] {
+                "Alumni",
+                PageUri.AlumniUri,
+                "footer-nav"
             };
         }
     }
